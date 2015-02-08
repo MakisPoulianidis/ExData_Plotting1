@@ -1,4 +1,46 @@
-## Introduction
+Coursera Exploratory Data Analysis Course Project1
+==================================================	
+
+The scripts are part of the first course project of the Coursera Exploratory Data Analysis course.
+
+All scripts perform some generic tasks
+- create a workdirectory if it does not yet exist (./ExData_Plotting1) 
+- create a data directory if it does not yet exist (./dataEPC)
+- download the raw data to the data directory if it does not yet exist
+- unzips the file in the to the data directory if it does not yet exist
+- loads all data in one df and replace "?" characters with NA
+- select only the relevant data and remove the df with all data to save memory
+- paste the Date and Time columns and convert the result to a date
+NB: all scripts show no warning messages, these are suppressed.
+
+# Script Plot1.R
+- plot was made by calling "hist" with extra parameters
+- the plot was written using "dev.copy" 
+Running script plot1.R
+- copy the script "plot1.R" to any folder 
+- load the script using "source("plot1.R")"
+- run the script using "plot1()"
+- The outputfile (plot1.png) can be found in the R working directory.
+
+## Requirements 
+The scripts were built and tested on 
+- R version 3.1.1 
+- R Studio Version 0.98.1062   
+- Mac (x86_64-apple-darwin13.1.0)
+
+The following packages are needed:
+- data.table
+- dplyr
+The	script will load these libraries but expects the packages to be installed.
+ 
+The following versions were used:
+- R version 3.1.1
+- data.table 1.9.4
+- dplyr 0.4.1
+
+Throughout the script Unix path notation style is used. 
+
+## Raw Data
 
 This assignment uses data from
 the <a href="http://archive.ics.uci.edu/ml/">UC Irvine Machine
@@ -33,10 +75,9 @@ web site</a>:
 <li><b>Sub_metering_3</b>: energy sub-metering No. 3 (in watt-hour of active energy). It corresponds to an electric water-heater and an air-conditioner.</li>
 </ol>
 
+
+
 ## Loading the data
-
-
-
 
 
 When loading the dataset into R, please consider the following:
