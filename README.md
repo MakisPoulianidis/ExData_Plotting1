@@ -3,13 +3,13 @@ Coursera Exploratory Data Analysis Course Project1
 
 The scripts are part of the first course project of the Coursera Exploratory Data Analysis course.
 
-# Running the scripts:
+## Running the scripts:
 - copy the script "plot1.R"/"plot2.R"/"plot3.R"/"plot4.R" to any folder 
 - load the script using "source("plot1.R")"/"source("plot2.R")"/etc.
 - run the script using "plot1()"/"plot2()"/"plot3()"/"plot4()"
 - The outputfiles (plot1.png/plot2.png/plot3.png/plot4.png) can be found in the R working directory.
 
-# General functions
+## General functions
 All scripts perform some generic tasks and have the following in common:
 - create a workdirectory if it does not yet exist (./ExData_Plotting1) 
 - create a data directory if it does not yet exist (./dataEPC)
@@ -26,16 +26,16 @@ All scripts perform some generic tasks and have the following in common:
 - closing the device using "dev.off()"
 NB: all scripts show no warning messages, these are suppressed.
 
-# Script Plot1.R
+### Script Plot1.R
 - plot was made by calling "hist" with extra parameters
 
-# Script Plot2.R
+### Script Plot2.R
 - plot was made by calling "plot" with extra parameters
 
-# Script Plot3.R
+### Script Plot3.R
 - plot was made by calling "plot" , "lines" and "legend".
 
-# Script Plot4.R
+### Script Plot4.R
 - four different plots were made: 2 & 3 and two new ones
 
 
