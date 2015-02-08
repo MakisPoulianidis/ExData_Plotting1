@@ -22,6 +22,17 @@ Running script plot1.R
 - run the script using "plot1()"
 - The outputfile (plot1.png) can be found in the R working directory.
 
+# Script Plot2.R
+- plot was made by calling "plot" with extra parameters
+- the plot was written using "dev.copy" 
+Running script plot2.R
+- copy the script "plot2.R" to any folder 
+- load the script using "source("plot2.R")"
+- run the script using "plot2()"
+- The outputfile (plot2.png) can be found in the R working directory.
+
+
+
 ## Requirements 
 The scripts were built and tested on 
 - R version 3.1.1 
