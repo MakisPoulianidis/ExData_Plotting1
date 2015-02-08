@@ -8,7 +8,9 @@ All scripts perform some generic tasks
 - create a data directory if it does not yet exist (./dataEPC)
 - download the raw data to the data directory if it does not yet exist
 - unzips the file in the to the data directory if it does not yet exist
-- loads all data in one df and replace "?" characters with NA
+- loads all data in one df with read.csv using:
+	- stringsAsFactors = FALSE
+	- na.strings="?"
 - select only the relevant data and remove the df with all data to save memory
 - paste the Date and Time columns and convert the result to a date
 NB: all scripts show no warning messages, these are suppressed.
@@ -23,6 +25,7 @@ Running script plot1.R
 - The outputfile (plot1.png) can be found in the R working directory.
 
 # Script Plot2.R
+- set the locale to English using Sys.setlocale("LC_TIME", "C")
 - plot was made by calling "plot" with extra parameters
 - the plot was written using "dev.copy" 
 Running script plot2.R
@@ -31,6 +34,16 @@ Running script plot2.R
 - run the script using "plot2()"
 - The outputfile (plot2.png) can be found in the R working directory.
 
+# Script Plot3.R
+- set the locale to English using Sys.setlocale("LC_TIME", "C")
+- a PNG was opened as graphics device
+- plot was made by calling "plot" , "lines" and "legend".
+- the PNG is written after calling "dev.close()" 
+Running script plot3.R
+- copy the script "plot3.R" to any folder 
+- load the script using "source("plot3.R")"
+- run the script using "plot3()"
+- The outputfile (plot3.png) can be found in the R working directory.
 
 
 ## Requirements 
@@ -38,18 +51,8 @@ The scripts were built and tested on
 - R version 3.1.1 
 - R Studio Version 0.98.1062   
 - Mac (x86_64-apple-darwin13.1.0)
-
-The following packages are needed:
-- data.table
-- dplyr
-The	script will load these libraries but expects the packages to be installed.
- 
-The following versions were used:
-- R version 3.1.1
-- data.table 1.9.4
-- dplyr 0.4.1
-
-Throughout the script Unix path notation style is used. 
+No additional packages are needed using R Studio.
+ Throughout the script Unix path notation style is used. 
 
 ## Raw Data
 
