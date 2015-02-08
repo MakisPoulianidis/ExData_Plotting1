@@ -5,7 +5,7 @@
 # R Studio Version 0.98.1062   
 # Mac (x86_64-apple-darwin13.1.0)
 
-plot3 <- function () {
+plot4 <- function () {
         options(warn=-1)          
         
         ## LOAD DATA 
@@ -52,28 +52,41 @@ plot3 <- function () {
         Sys.setlocale("LC_TIME", "C")
         
         ## open a graphics device
-        png(filename = "plot3.png", 
+        png(filename = "plot4.png", 
             width = 480, 
             height = 480, 
             units = "px", 
             bg = "white" )
         
-        ## Make a plot using "plot"
+        ## set the number of columns and rows
+        par(mfrow = c(2, 2))
+        with(hpc_subset, {
+                ## Make plot 1 using "plot"                
+        plot(hpc_subset$Date.Time,hpc_subset$Global_active_power,
+             xlab="", 
+             ylab="Global Active Power (kilowats)",             
+             bg = "white", ## set background colour
+             type="l")
+        ## Make plot 2 using "plot"
+        plot(hpc_subset$Date.Time,hpc_subset$Voltage,
+                xlab="datetime", 
+                ylab="Voltage",
+                bg = "white", ## set background colour
+                type="l")
+        ## Make plot 3 using "plot"
         plot(hpc_subset$Date.Time,hpc_subset$Sub_metering_1,
              col = "black",
              xlab="", 
              ylab="Energy sub metering",
              bg = "white", 
              type="l")        
-        
         ## add a 2nd line to the plot using "lines"
         lines(hpc_subset$Date.Time,hpc_subset$Sub_metering_2,
-             col = "red",
-             xlab="", 
-             ylab="Energy sub metering",
-             bg = "white", 
-             type="l")
-        
+              col = "red",
+              xlab="", 
+              ylab="Energy sub metering",
+              bg = "white", 
+              type="l")
         ## add a 3nd line to the plot using "lines"
         lines(hpc_subset$Date.Time,hpc_subset$Sub_metering_3,
               col = "blue",
@@ -81,7 +94,6 @@ plot3 <- function () {
               ylab="Energy sub metering",
               bg = "white", 
               type="l")
-        
         ## add a legend to the plot
         legend("topright", 
                legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), 
@@ -89,6 +101,14 @@ plot3 <- function () {
                y.intersp = 1.0,
                lwd = .75, 
                cex = .75)
+        ## Make plot 4 using "plot"
+        plot(hpc_subset$Date.Time,hpc_subset$Global_reactive_power,
+                xlab="datetime", 
+                ylab="Global_reactive_power",
+                bg = "white", ## set background colour
+                type="l")
+        mtext("", outer = FALSE)
+        })
         
         ## close the device...
         dev.off()

@@ -3,7 +3,14 @@ Coursera Exploratory Data Analysis Course Project1
 
 The scripts are part of the first course project of the Coursera Exploratory Data Analysis course.
 
-All scripts perform some generic tasks
+# Running the scripts:
+- copy the script "plot1.R"/"plot2.R"/"plot3.R"/"plot4.R" to any folder 
+- load the script using "source("plot1.R")"/"source("plot2.R")"/etc.
+- run the script using "plot1()"/"plot2()"/"plot3()"/"plot4()"
+- The outputfiles (plot1.png/plot2.png/plot3.png/plot4.png) can be found in the R working directory.
+
+# General functions
+All scripts perform some generic tasks and have the following in common:
 - create a workdirectory if it does not yet exist (./ExData_Plotting1) 
 - create a data directory if it does not yet exist (./dataEPC)
 - download the raw data to the data directory if it does not yet exist
@@ -13,37 +20,23 @@ All scripts perform some generic tasks
 	- na.strings="?"
 - select only the relevant data and remove the df with all data to save memory
 - paste the Date and Time columns and convert the result to a date
+- set the locale to English using Sys.setlocale("LC_TIME", "C")
+- opening a PNG as graphics device
+- making the plot
+- closing the device using "dev.off()"
 NB: all scripts show no warning messages, these are suppressed.
 
 # Script Plot1.R
 - plot was made by calling "hist" with extra parameters
-- the plot was written using "dev.copy" 
-Running script plot1.R
-- copy the script "plot1.R" to any folder 
-- load the script using "source("plot1.R")"
-- run the script using "plot1()"
-- The outputfile (plot1.png) can be found in the R working directory.
 
 # Script Plot2.R
-- set the locale to English using Sys.setlocale("LC_TIME", "C")
 - plot was made by calling "plot" with extra parameters
-- the plot was written using "dev.copy" 
-Running script plot2.R
-- copy the script "plot2.R" to any folder 
-- load the script using "source("plot2.R")"
-- run the script using "plot2()"
-- The outputfile (plot2.png) can be found in the R working directory.
 
 # Script Plot3.R
-- set the locale to English using Sys.setlocale("LC_TIME", "C")
-- a PNG was opened as graphics device
 - plot was made by calling "plot" , "lines" and "legend".
-- the PNG is written after calling "dev.close()" 
-Running script plot3.R
-- copy the script "plot3.R" to any folder 
-- load the script using "source("plot3.R")"
-- run the script using "plot3()"
-- The outputfile (plot3.png) can be found in the R working directory.
+
+# Script Plot4.R
+- four different plots were made: 2 & 3 and two new ones
 
 
 ## Requirements 
@@ -51,8 +44,9 @@ The scripts were built and tested on
 - R version 3.1.1 
 - R Studio Version 0.98.1062   
 - Mac (x86_64-apple-darwin13.1.0)
-No additional packages are needed using R Studio.
- Throughout the script Unix path notation style is used. 
+Please note:
+- No additional packages are needed using R Studio.
+- Throughout the scripts Unix path notation style is used. 
 
 ## Raw Data
 

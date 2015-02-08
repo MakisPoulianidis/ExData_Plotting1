@@ -54,6 +54,13 @@ rm (hpc_fullset)
 hpc_subset$Date.Time <- 
         strptime(paste(hpc_subset$Date, hpc_subset$Time),  format = "%d/%m/%Y %H:%M:%S")
 
+## open a graphics device
+png(filename = "plot1.png", 
+    width = 480, 
+    height = 480, 
+    units = "px", 
+    bg = "white" )
+
 ## Make a plot using "hist"
 hist(hpc_subset$Global_active_power, 
         col='red', ## set the colour to red
@@ -62,9 +69,6 @@ hist(hpc_subset$Global_active_power,
         width = 480, ## set width
         height = 480, ## set height
         bg = "white") ## set background colour
-
-## write the plot to the wd()
-dev.copy(png, file = "plot1.png")
 
 ## close the device...
 dev.off()

@@ -57,6 +57,12 @@ hpc_subset$Date.Time <-
 ## set the locale to English to 
 Sys.setlocale("LC_TIME", "C")
 
+## open a graphics device
+png(filename = "plot2.png", 
+    width = 480, 
+    height = 480, 
+    units = "px", 
+    bg = "white" )
 
 ## Make a plot using "plot"
 plot(hpc_subset$Date.Time,hpc_subset$Global_active_power,
@@ -66,9 +72,6 @@ plot(hpc_subset$Date.Time,hpc_subset$Global_active_power,
         height = 480, ## set height
         bg = "white", ## set background colour
         type="l")
-
-## write the plot to the wd()
-dev.copy(png, file = "plot2.png")
 
 ## close the device...
 dev.off()
